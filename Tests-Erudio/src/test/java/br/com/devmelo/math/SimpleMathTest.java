@@ -8,9 +8,15 @@ public class SimpleMathTest {
     @Test
     void testSum(){
         SimpleMath math = new SimpleMath();
-        Double res = math.sum(6.2D, 2D);
-        assertEquals(8.2D, res, "6.2 + 2 , not produce 8.2");
-        assertNotEquals(9.2D, res); // testando se não é igual
-        assertNotNull(res); // testando se existe o objeto
+        double firstNumber = 6.2D;
+        double secondNumber = 2D;
+
+        Double actual = math.sum(firstNumber, secondNumber);
+        double expected = 8.2D;
+
+        assertEquals(expected, actual,
+                () -> firstNumber + " + " + secondNumber + " , not produce " + expected); // com lambda só roda se ocorrer a falha.
+        assertNotEquals(9.2D, actual); // testando se não é igual
+        assertNotNull(actual); // testando se existe o objeto
     }
 }
