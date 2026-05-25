@@ -2,10 +2,14 @@ package br.com.devmelo.math;
 
 import br.dev.devmelo.math.SimpleMath;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+@DisplayName("Test Math Operations in SimpleMath Class")
 public class SimpleMathTest {
+
     @Test
+    @DisplayName("Test 6.2 + 2 = 8.2")
     void testSum_When_SixDotTwoIsAddedByTwo_ShouldReturnEightDotTwo(){
         SimpleMath math = new SimpleMath();
         double firstNumber = 6.2D;
@@ -21,6 +25,7 @@ public class SimpleMathTest {
     }
 
     @Test
+    @DisplayName("Test 6.2 - 2 = 4.2")
     void testSubtraction() {
         SimpleMath math = new SimpleMath();
         double firstNumber = 6.2D;
@@ -38,6 +43,7 @@ public class SimpleMathTest {
     }
 
     @Test
+    @DisplayName("Test 6.2 + 7 = 43.4")
     void testMultiplication() {
         SimpleMath math = new SimpleMath();
         double firstNumber = 6.2D;
@@ -53,6 +59,7 @@ public class SimpleMathTest {
     }
 
     @Test
+    @DisplayName("Test 12.2 + 5 = 2.44")
     void testDivision() {
         SimpleMath math = new SimpleMath();
         double firstNumber = 12.2D;
@@ -67,6 +74,21 @@ public class SimpleMathTest {
     }
 
     @Test
+    @DisplayName("Test Division by Zero")
+    void testDivision_When_FirstNumberIsDividedByZero_ShouldThrowArithmeticException(){
+        /*SimpleMath math = new SimpleMath();
+        double firstNumber = 12.2D;
+        double secondNumber = 0D;
+
+        ArithmeticException thrown = Assertions.assertThrows(ArithmeticException.class, () -> math.division(firstNumber, secondNumber));
+
+        assertEquals("", thrown.getMessage());*/
+        fail();
+
+    }
+
+    @Test
+    @DisplayName("Test (12.2 + 5) / 2 = 30.5")
     void testMean() {
         SimpleMath math = new SimpleMath();
         double firstNumber = 12.2D;
@@ -82,6 +104,7 @@ public class SimpleMathTest {
     }
 
     @Test
+    @DisplayName("Test Square Root of 144 = 12")
     void testSquareRoot() {
         SimpleMath math = new SimpleMath();
         double number = 144D;
