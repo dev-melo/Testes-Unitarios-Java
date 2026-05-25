@@ -10,5 +10,7 @@ public class SimpleMathTest {
         SimpleMath math = new SimpleMath();
         Double res = math.sum(6.2D, 2D);
         assertEquals(8.2D, res, "6.2 + 2 , not produce 8.2");
+        assertNotEquals(9.2D, res); // testando se não é igual
+        assertNotNull(res); // testando se existe o objeto
     }
 }
