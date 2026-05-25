@@ -9,6 +9,6 @@ public class SimpleMathTest {
     void testSum(){
         SimpleMath math = new SimpleMath();
         Double res = math.sum(6.2D, 2D);
-        assertEquals(8.2D, res);
+        assertEquals(8.2D, res, "6.2 + 2 , not produce 8.2");
     }
 }
